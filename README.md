@@ -16,6 +16,8 @@ Import the project into Eclipse and add the jars to the project's build path.
 
 Once the jars are added to your Java Build Path, modify the applicationId variable to hold your API key found at JBay\src\Models\EbayCommonModel.java
 
+![Alt text](/screenshots/main_view.png "JBay GUI")
+
 
 TODO:
 1. Add ability to request a set number of results
