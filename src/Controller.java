@@ -16,10 +16,6 @@ public class Controller {
 		new MainView(this);
 	}
 
-	public void setSearchString(String searchStr) {
-		model.setSearchString(searchStr);
-	}
-
 	public List<SearchItem> getSearchResults() {
 		return model.getResults();
 	}
