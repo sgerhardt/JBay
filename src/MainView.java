@@ -25,7 +25,7 @@ public class MainView extends JFrame {
 
 	JTextField searchField;
 	JTable table;
-	JLabel medianValueLabel = new JLabel("Median: 0");
+	JLabel medianValueLabel = new JLabel("Median:$0");
 
 	private Controller controller;
 
@@ -65,20 +65,19 @@ public class MainView extends JFrame {
 
 		queryPanel.add(historyRadioButton);
 		queryPanel.add(liveRadioButton);
-
+		queryPanel.add(medianValueLabel);
+		
 		// Create table for results
-		JPanel mainPanel = new JPanel();
 		String[] columnNames = { "Item Name", "Item Price" };
 		table = new JTable();
+
 		DefaultTableModel model = new DefaultTableModel();
 		table.setModel(model);
 		model.setColumnIdentifiers(columnNames);
 
 		JScrollPane scrollPane = new JScrollPane(table);
-		mainPanel.add(scrollPane);
-		mainPanel.add(medianValueLabel);
 
-		this.getContentPane().add(BorderLayout.CENTER, mainPanel);
+		this.getContentPane().add(BorderLayout.CENTER, scrollPane);
 		this.getContentPane().add(BorderLayout.EAST, queryPanel);
 		this.setSize(950, 600);
 		this.setVisible(true);
@@ -130,7 +129,7 @@ public class MainView extends JFrame {
 		priceArray = list.toArray(priceArray);
 		java.util.Arrays.sort(priceArray);
 		if (priceArray.length % 2 == 0) {
-			medianValueLabel.setText("Median: "
+			medianValueLabel.setText("Median:$"
 					+ priceArray[(priceArray.length - 1) / 2]);
 		} else {
 			medianValueLabel
