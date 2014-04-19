@@ -43,7 +43,8 @@ public class MainView extends JFrame {
 		JLabel searchLabel = new JLabel("Enter Search Text Below:");
 		queryPanel.add(searchLabel);
 
-		searchField = new JTextField(20);
+		searchField = new JTextField(25);
+		searchField.setMaximumSize(searchField.getPreferredSize());
 		queryPanel.add(searchField);
 
 		JButton searchButton = new JButton("Search");
@@ -51,8 +52,9 @@ public class MainView extends JFrame {
 		searchButton.addActionListener(new SearchClickedListener());
 
 		ButtonGroup viewRadioButtonGroup = new ButtonGroup();
-
+		
 		JRadioButton historyRadioButton = new JRadioButton();
+		historyRadioButton.setBackground(Color.lightGray);
 		historyRadioButton.setText("Sold Items");
 		viewRadioButtonGroup.add(historyRadioButton);
 		historyRadioButton.setSelected(true);
@@ -61,6 +63,7 @@ public class MainView extends JFrame {
 		JRadioButton liveRadioButton = new JRadioButton();
 		liveRadioButton.setText("Live Items");
 		liveRadioButton.addActionListener(new LiveSelectedListener());
+		liveRadioButton.setBackground(Color.lightGray);
 		viewRadioButtonGroup.add(liveRadioButton);
 
 		queryPanel.add(historyRadioButton);
