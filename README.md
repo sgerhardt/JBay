@@ -1,7 +1,7 @@
 JBay
 ====
 
-Java GUI for the eBay Finding API
+Java GUI for the eBay Finding API - Find items on eBay with a search string
 
 
 To use this software you will need the following:
