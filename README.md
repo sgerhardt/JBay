@@ -12,7 +12,10 @@ To use this software you will need the following:
 
 These items can be obtained by enrolling in the eBay developers program.
 
+Import the project into Eclipse and add the jars to the project's build path.
+
 Once the jars are added to your Java Build Path, modify the applicationId variable to hold your API key found at JBay\src\Models\EbayCommonModel.java
+
 
 TODO:
 1. Add ability to request a set number of results
