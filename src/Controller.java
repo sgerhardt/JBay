@@ -6,9 +6,6 @@ import com.ebay.services.finding.SearchItem;
 
 public class Controller {
 
-	/* The view sends the search string to the controller */
-	String searchString = "";
-
 	private EbayCommonModel model;
 
 	public Controller(EbayCommonModel model) {
@@ -20,15 +17,7 @@ public class Controller {
 		return model.getResults();
 	}
 
-	public List<Double> getItemPrices(List<SearchItem> items) {
-		return model.getItemPrices(items);
-	}
-
-	public List<String> getItemTitles(List<SearchItem> items) {
-		return model.getItemTitles(items);
-	}
-
-	public ArrayList<?> updateView() {
+	public ArrayList<?> updateView(String searchString) {
 		model.setSearchString(searchString);
 		List<SearchItem> list = this.getSearchResults();
 		ArrayList<List> arrayOfLists = new ArrayList<List>();

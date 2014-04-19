@@ -145,8 +145,7 @@ public class MainView extends JFrame {
 		public void actionPerformed(ActionEvent event) {
 			if (searchField.getText() != null
 					&& !searchField.getText().trim().equals("")) {
-				controller.searchString = searchField.getText();
-				updateTableValues(controller.updateView());
+				updateTableValues(controller.updateView(searchField.getText()));
 			}
 		}
 	}
